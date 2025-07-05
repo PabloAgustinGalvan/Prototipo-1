@@ -1,0 +1,522 @@
+/* Fuentes y reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #eee;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 80px; /* ← NUEVO: compensa el menú fijo */
+}
+
+/* NAV PRINCIPAL */
+nav.nav-principal {
+  position: fixed; /* ← CAMBIO clave */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* asegurate de que quede arriba de todo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid #222;
+}
+
+nav.nav-principal .logo {
+  display: flex;          /* Para poder alinear icono y texto horizontalmente */
+  align-items: center;    /* Centrar verticalmente */
+  gap: 0.6rem;            /* Espacio entre icono y texto */
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 1.5px;
+  color: white;
+  cursor: default;
+}
+
+.logo-icon-wrapper {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: black; /* fondo celeste */
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.logo-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+nav.nav-principal ul.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav.nav-principal ul.menu li a {
+  color: #aaa;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav.nav-principal ul.menu li a:hover,
+nav.nav-principal ul.menu li a:focus {
+  color: #50b5ff;
+  outline: none;
+}
+
+/* BOTÓN DISCORD */
+a.btn-discord {
+  background-color: #50b5ff;
+  color: white;
+  font-weight: 600;
+  padding: 0.6rem 1.3rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  border: 2px solid transparent;
+}
+
+a.btn-discord:hover,
+a.btn-discord:focus {
+  background-color: #50b5ff;
+  border-color: #414fbe;
+  outline: none;
+}
+
+/* HERO / PORTADA */
+section.hero {
+    position: relative;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    z-index: 10;
+    color: #eee;
+}
+
+.neon-wrapper {
+  position: relative;
+  display: inline-block; /* que ajuste al contenido */
+  margin: 2rem 0;
+}
+
+.neon-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  right: -30px;
+  bottom: -20px;
+  background: #50b5ff;
+  filter: blur(40px);
+  opacity: 0.5;
+  border-radius: 25px;
+  z-index: -1; /* queda atrás del texto */
+}
+
+section.hero .codigo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #ffffff !important;         /* blanco puro */
+  background-color: #50b5ff;          /* fondo celeste */
+  padding: 0.3rem 0.6rem;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+section.hero .codigo {
+  color: #a1d8ff;
+}
+
+section.hero .slogan {
+  font-size: 1.2rem;
+  font-weight: 600;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: #888888;
+}
+.resaltado-celeste{
+  font-size: 1.2rem;
+  font-weight: 600;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: #87ceeb;
+}
+
+section.hero .nombre-del-sitio{
+  font-size: 4rem;      /* tamaño grande */
+  font-weight: 700;
+  color: #50b5ff;
+  margin-bottom: 0.3rem; /* espacio abajo */
+}
+
+.btn i {
+  margin-right: 0.5rem;
+}
+
+.cta-botones {
+  display: inline-flex;
+  gap: 1.3rem;
+}
+
+.cta-botones .btn {
+  background-color: #50b5ff;
+  color: white;
+  padding: 0.9rem 2.2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-botones .btn:hover,
+.cta-botones .btn:focus {
+  background-color: #4091cc;
+  outline: none;
+}
+
+/* SECCIONES GENERALES */
+.seccion {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.seccion-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.seccion-cabecera h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #eee;
+}
+
+.seccion-cabecera .ver-mas {
+   display: inline-block;       /* respeta padding como bloque */
+   background-color: #50b5ff;   /* fondo celeste */
+   color: #fff;                 /* texto blanco */
+   padding: 0.3rem 0.9rem;      /* alto × ancho del rectángulo */
+   border-radius: 6px;          /* esquinas redondeadas */
+   font-weight: 600;
+   font-size: 1rem;
+   text-decoration: none;       /* sin subrayado */
+   transition: background-color 0.3s ease;
+}
+
+.seccion-cabecera .ver-mas:hover,
+.seccion-cabecera .ver-mas:focus {
+  background-color: #4091cc;   /* tono más oscuro al pasar el mouse */
+  outline: none;
+}
+
+/* TARJETAS BONUSES */
+.tarjetas-bonuses {
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjeta-bonus {
+  background: #121212;
+  padding: 1.8rem 2rem;
+  border-radius: 14px;
+  width: 280px;
+  box-shadow: 0 2px 8px rgb(80 181 255 / 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tarjeta-bonus h3.bonus-code {
+  font-weight: 700;
+  color: #50b5ff;
+}
+
+.tarjeta-bonus h3.bonus-code span {
+  font-weight: 900;
+  color: #a1d8ff;
+}
+
+.bonus-beneficios {
+  list-style: none;
+  padding-left: 0;
+  color: #ddd;
+  font-weight: 500;
+}
+
+.bonus-beneficios li {
+  margin-bottom: 0.5rem;
+}
+
+.btn-claim {
+  background-color: #50b5ff;
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-claim:hover,
+.btn-claim:focus {
+  background-color: #4091cc;
+  outline: none;
+}
+
+/* TABLA LEADERBOARD */
+.tabla-leaderboard {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #121212;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgb(80 181 255 / 0.2);
+}
+
+.tabla-leaderboard thead tr {
+  background-color: #222;
+}
+
+.tabla-leaderboard th,
+.tabla-leaderboard td {
+  padding: 1rem 1.3rem;
+  color: #eee;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+}
+
+.tabla-leaderboard tbody tr:hover {
+  background-color: #50b5ff33;
+}
+
+.tabla-leaderboard tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* GALERÍA VIDEOS */
+.galeria-videos {
+  display: flex;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tarjeta-video {
+  background-color: #121212;
+  width: 280px;
+  height: 160px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgb(80 181 255 / 0.25);
+}
+
+/* SOCIAL MEDIA */
+.lista-social {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding-left: 0;
+  margin-top: 1rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lista-social li {
+  background-color: #222;
+  border-radius: 8px;
+  padding: 1rem 1.5rem 1.8rem; /* un poco más abajo para descripción */
+  box-shadow: 0 2px 6px rgba(80,181,255,0.3);
+  transition: background-color 0.3s ease;
+  min-width: 220px;
+  flex: 1 1 220px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.lista-social li:hover {
+  background-color: #50b5ff;
+}
+
+.social-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.6rem;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.lista-social li a {
+  color: #eee;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.lista-social li:hover a {
+  color: #000;
+}
+
+.social-desc {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.3;
+}
+
+.social-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-right: 1.5rem; /* espacio para la flecha */
+}
+
+.flecha-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #50b5ff;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.social-card:hover .flecha-icon {
+  transform: translateY(-50%) translateX(5px);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #666;
+  font-size: 0.9rem;
+  background-color: #111;
+  border-top: 1px solid #222;
+}
+
+footer nav.footer-menu {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+footer nav.footer-menu a {
+  color: #50b5ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer nav.footer-menu a:hover,
+footer nav.footer-menu a:focus {
+  color: #a1d8ff;
+  outline: none;
+}
+
+.seccion-cabecera h2 {
+  color: #50b5ff;          /* celeste principal */
+  display: flex;           /* opcional: evita saltos de línea entre icono y texto */
+  align-items: center;     /* opcional: los centra verticalmente */
+  gap: 0.5rem;             /* mismo espacio que ya tenías para el icono */
+}
+
+.resaltado {
+  background-color: #50b5ff;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.codigo {
+  color: #eee;
+  font-weight: 600;
+  padding: 0;
+}
+
+.menu a {
+  color: #aaa;
+  text-decoration: none;
+  font-weight: 600;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+nav.nav-principal ul.menu li a.activo {
+  color: #50b5ff;
+  border-bottom: 2px solid #50b5ff;
+}
+
+section {
+  scroll-margin-top: 90px; /* se alinea justo debajo del nav */
+}
+
+.legal {
+  font-style: italic;
+}
+
+p, p a {
+  font-style: italic;
+  font-size: 11px;
+  color: #808080;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F0F0F0; /* celeste al pasar el mouse */
+}
+
+.footer-linea {
+  width: 25%;                 /* la línea ocupa el 50% del ancho del contenedor */
+  height: 2px;                /* grosor de la línea */
+  background-color: #50b5ff;  /* color celeste */
+  margin: 0.8rem auto 1.5rem; /* centrado horizontal y separación arriba/abajo */
+  border-radius: 2px;         /* bordes redondeados para que quede más suave */
+}
+
+
+
