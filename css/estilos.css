@@ -30,6 +30,16 @@ nav.nav-principal {
   border-bottom: 1px solid #222;
 }
 
+.nav-contenido {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  width: 100%;
+}
+
 nav.nav-principal .logo {
   display: flex;          /* Para poder alinear icono y texto horizontalmente */
   align-items: center;    /* Centrar verticalmente */
@@ -516,6 +526,20 @@ a:hover {
   background-color: #50b5ff;  /* color celeste */
   margin: 0.8rem auto 1.5rem; /* centrado horizontal y separación arriba/abajo */
   border-radius: 2px;         /* bordes redondeados para que quede más suave */
+}
+
+
+.hero-imagen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap; /* ← clave para que no se apilen */
+}
+
+.soldado {
+  width: 350px;   /* Aumentá según lo que necesites */
+  height: auto;
 }
 
 

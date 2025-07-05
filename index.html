@@ -18,35 +18,46 @@
 <div id="particles-js"></div>
 <header>
     <nav class="nav-principal">
-        <h1 class="logo">
-      <span class="logo-icon-wrapper">
-        <video autoplay loop muted playsinline class="logo-icon">
-          <source src="assets/gift/animacion.webm" type="video/webm" />
-          Tu navegador no soporta videos.
-        </video>
-      </span>
-            ReLAS
-        </h1>
-        <ul class="menu">
-            <li><a href="#home" class="activo">Home</a></li>
-            <li><a href="#bonuses">Bonuses</a></li>
-            <li><a href="#leaderboards">Leaderboards</a></li>
-            <li><a href="#content">Content</a></li>
-        </ul>
-        <a class="btn-discord" href="https://discord.gg/" target="_blank" rel="noopener noreferrer">
-            <i class="fab fa-discord" aria-hidden="true"></i>
-            Join&nbsp;Discord
-        </a>
+        <div class="nav-contenido">
+            <h1 class="logo">
+        <span class="logo-icon-wrapper">
+          <video autoplay loop muted playsinline class="logo-icon">
+            <source src="assets/gift/animacion.webm" type="video/webm" />
+            Tu navegador no soporta videos.
+          </video>
+        </span>
+                ReLAS
+            </h1>
 
+            <ul class="menu">
+                <li><a href="#home" class="activo">Home</a></li>
+                <li><a href="#bonuses">Bonuses</a></li>
+                <li><a href="#leaderboards">Leaderboards</a></li>
+                <li><a href="#content">Content</a></li>
+            </ul>
+
+            <a class="btn-discord" href="https://discord.gg/" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-discord" aria-hidden="true"></i>
+                Join&nbsp;Discord
+            </a>
+        </div>
     </nav>
 
     <!-- HERO / PORTADA -->
     <section id="home" class="hero">
         <p class="codigo">USE CODE:JOONXO</span></p>
 
+        <div class="hero-imagen">
+
+
+        <img src="assets/img/izquierda.jpg" alt="Decoración izquierda" class="soldado" />
+
         <div class="neon-wrapper">
             <h1 class="nombre-del-sitio">ReLAS'S REWARDS WEBSITE</h1>
         </div>
+            <img src="assets/img/izquierda.jpg" alt="Decoración derecha" class="soldado" />
+        </div>
+
 
         <h2 class="slogan">
             Join the  <span class="resaltado-celeste">leaderboards</span> for <span class="resaltado-celeste">exclusive rewards</span>
@@ -217,7 +228,7 @@
     /* Cargar siempre el mismo archivo JSON */
     particlesJS.load(
       'particles-js',               // ID del contenedor
-      'assets/particles/stars.json',// 
+      'assets/particles/stars.json',
       () => console.log('Particles cargadas')
     );
 </script>
