@@ -263,36 +263,100 @@ section.hero .nombre-del-sitio{
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  text-align: center;
+  border: 2px solid #50b5ff; /* ← Esta línea agrega el borde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* sombra sutil */
 }
 
 .tarjeta-bonus h3.bonus-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 700;
   color: #50b5ff;
+  position: relative;
+  font-size: 1.2rem;
 }
+
+/* Línea a la izquierda */
+.tarjeta-bonus h3.bonus-code::before {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 1px solid #ccc;
+  margin-right: 0.75em;
+  align-self: center;
+  min-width: 30px;
+  border-bottom-color: #50b5ff;
+}
+
+/* Línea a la derecha */
+.tarjeta-bonus h3.bonus-code::after {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 1px solid #ccc;
+  margin-left: 0.75em;
+  align-self: center;
+  min-width: 30px;
+  border-bottom-color: #50b5ff;
+}
+
 
 .tarjeta-bonus h3.bonus-code span {
   font-weight: 900;
   color: #a1d8ff;
 }
 
+.fa-circle-check {
+  color: #50b5ff; /* verde */
+}
+
+.copiar-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #007bff;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.copiar-btn:hover {
+  color: #0056b3;
+  transform: scale(1.2);
+}
+
 .bonus-beneficios {
-  list-style: none;
-  padding-left: 0;
-  color: #ddd;
-  font-weight: 500;
+  list-style: none;        /* Quita los puntitos */
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;   /* Centra la lista en el article */
+  text-align: left;        /* Texto alineado en vertical */
 }
 
 .bonus-beneficios li {
-  margin-bottom: 0.5rem;
+  display: flex;           /* Ícono y texto en fila */
+  align-items: start;
+  margin-bottom: 5px;
+}
+
+.icono {
+  width: 1.5em;            /* Espacio fijo para alinear */
+  display: inline-block;
+  text-align: center;
+  margin-right: 0.5em;
 }
 
 .btn-claim {
   background-color: #50b5ff;
   color: white;
-  font-weight: 700;
-  padding: 0.75rem;
+  font-weight: 1000;
+  padding: 0.75rem 2.5rem; /* 0.75 rem arriba/abajo, 2.5 rem a los lados */
+  min-width: 220px;        /* se alarga hasta al menos 220 px */
+  display: inline-block;   /* sigue la línea, pero respeta ancho+padding */
   border: none;
-  border-radius: 40px;
+  border-radius: 70px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -301,6 +365,14 @@ section.hero .nombre-del-sitio{
 .btn-claim:focus {
   background-color: #4091cc;
   outline: none;
+}
+
+.bonus-img {
+  display: block;     /* Para que respete márgenes */
+  margin: 0 auto;     /* Centra horizontalmente */
+  width: 100px;
+  height: auto;
+  margin-bottom: 8px;
 }
 
 /* TABLA LEADERBOARD */
@@ -336,18 +408,57 @@ section.hero .nombre-del-sitio{
 
 /* GALERÍA VIDEOS */
 .galeria-videos {
-  display: flex;
-  gap: 1.6rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
+.logo-youtube {
+  height: 48px; /* o el tamaño que quieras */
+  width: auto;
+  display: inline-block;
+}
+
+.ver-mas-con-icono {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none; /* quita subrayado */
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+
+
+
 .tarjeta-video {
-  background-color: #121212;
-  width: 280px;
-  height: 160px;
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgb(80 181 255 / 0.25);
+  background: #121212;
+  border: 2px solid #50b5ff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(80, 181, 255, 0.25);
+}
+
+.tarjeta-video:hover {
+  transform: scale(1.03);
+}
+
+.tarjeta-video img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.fecha-video {
+  color: #a1d8ff;
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 0.5rem 0 1rem;
+  color: #cccccc;
 }
 
 /* SOCIAL MEDIA */

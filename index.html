@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JoonXO – Rewards & Leaderboards</title>
     <script src="js/main.js" defer></script>
+    <script src="js/copiar.js" defer></script>
     <link rel="stylesheet" href="css/particles.css" />
     <link rel="stylesheet" href="css/estilos.css" />
     <link
@@ -84,12 +85,49 @@
         <div class="tarjetas-bonuses">
             <!-- Tarjeta • Copiá/pegá para crear más -->
             <article class="tarjeta-bonus">
-                <h3 class="bonus-code">Code <span>JOONXO</span></h3>
+                <img src="assets/img/skinclub.jpg" alt="Bonus icon" class="bonus-img">
+                <h3 class="bonus-code">Code <span id="codigo-skin-club">Relas</span>
+                    <button class="copiar-btn" onclick="copiarCodigo('codigo-skin-club')" title="Copiar código">
+                        <i class="fa-regular fa-copy"></i>
+                    </button>
+                </h3>
                 <ul class="bonus-beneficios">
-                    <li>✅ Free Cases</li>
-                    <li>✅ +5% Deposit Bonus</li>
+                    <li><i class="fa-solid fa-circle-check"></i></span><span class="texto">1 Caja Gratis</span></li>
+                    <li><i class="fa-solid fa-circle-check"></i><span class="texto">+7% Depósito en Bonus</span></li>
                 </ul>
-                <button class="btn-claim">Claim&nbsp;Now</button>
+                <a href="https://l.skin.club/625RELAS7PR" target="_blank">
+                <button class="btn-claim"><i class="fas fa-gift"></i> Reclama&nbsp;Ahora</button>
+                </a>
+            </article>
+            <article class="tarjeta-bonus">
+                <img src="assets/img/skinclub.jpg" alt="Bonus icon" class="bonus-img">
+                <h3 class="bonus-code">Code <span id="codigo-panda">Relas</span>
+                    <button class="copiar-btn" onclick="copiarCodigo('codigo-panda')" title="Copiar código">
+                        <i class="fa-regular fa-copy"></i>
+                    </button></h3>
+                </h3>
+                <ul class="bonus-beneficios">
+                    <li><i class="fa-solid fa-circle-check"></i><span class="texto">1 Caja Gratis</span></li>
+                    <li><i class="fa-solid fa-circle-check"></i><span class="texto">+15% Depósito en Bonus</span></li>
+                </ul>
+                <a href="https://panda.skin/ref/relascs2" target="_blank">
+                    <button class="btn-claim"><i class="fas fa-gift"></i> Reclama&nbsp;Ahora</button>
+                </a>
+            </article>
+            <article class="tarjeta-bonus">
+                <img src="assets/img/skinclub.jpg" alt="Bonus icon" class="bonus-img">
+                <h3 class="bonus-code">Code <span id="codigo-gg-drop">Relas</span>
+                    <button class="copiar-btn" onclick="copiarCodigo('codigo-gg-drop')" title="Copiar código">
+                        <i class="fa-regular fa-copy"></i>
+                    </button></h3>
+                </h3>
+                <ul class="bonus-beneficios">
+                    <li><i class="fa-solid fa-circle-check"></i><span class="texto">1 Caja Gratis</span></li>
+                    <li><i class="fa-solid fa-circle-check"></i><span class="texto">+11% Depósito en Bonus</span></li>
+                </ul>
+                <a href="https://ggdrop.art/ReLASCS2" target="_blank">
+                    <button class="btn-claim"><i class="fas fa-gift"></i> Reclama&nbsp;Ahora</button>
+                </a>
             </article>
         </div>
     </section>
@@ -125,15 +163,36 @@
     <!-- LATEST VIDEOS / CONTENT -->
     <section id="content" class="seccion">
         <header class="seccion-cabecera">
-            <h2><i class="fas fa-tv"></i> Latest videos</h2>
-            <a href="#" class="ver-mas">See more content</a>
+            <h2 class="header-titulo">
+                <i class="fas fa-tv"></i> Latest videos
+            </h2>
+
+            <a href="https://tu-link-aqui.com" target="_blank" class="ver-mas-con-icono">
+                <img src="assets/img/youtube.png" alt="Logo de YouTube" class="logo-youtube" />
+                <span class="ver-mas">See more content</span>
+            </a>
         </header>
 
         <div class="galeria-videos">
             <!-- Placeholder para videos -->
-            <article class="tarjeta-video"></article>
-            <article class="tarjeta-video"></article>
-            <article class="tarjeta-video"></article>
+            <article class="tarjeta-video">
+                <a href="https://www.youtube.com/watch?v=g-4l9BdmRKQ" target="_blank">
+                    <img src="https://img.youtube.com/vi/g-4l9BdmRKQ/hqdefault.jpg" alt="Miniatura 2" />
+                </a>
+                <p class="fecha-video">Publicado: 2 jul 2025</p>
+            </article>
+            <article class="tarjeta-video">
+                <a href="https://www.youtube.com/watch?v=YBdpaMTP-Ow" target="_blank">
+                    <img src="https://img.youtube.com/vi/YBdpaMTP-Ow/hqdefault.jpg" alt="Miniatura 2" />
+                </a>
+                <p class="fecha-video">Publicado: 27 jun 2025</p>
+            </article>
+            <article class="tarjeta-video">
+                <a href="https://www.youtube.com/watch?v=L7f2jEy3vjc" target="_blank">
+                    <img src="https://img.youtube.com/vi/L7f2jEy3vjc/hqdefault.jpg" alt="Miniatura 2" />
+                </a>
+                <p class="fecha-video">Publicado: 26 jun 2025</p>
+            </article>
         </div>
     </section>
 
