@@ -171,6 +171,7 @@ section.hero .slogan {
 }
 
 section.hero .nombre-del-sitio{
+  font-family: "Permanent Marker", cursive;
   font-size: 4rem;      /* tamaño grande */
   font-weight: 700;
   color: #50b5ff;
@@ -225,7 +226,12 @@ section.hero .nombre-del-sitio{
 .seccion-cabecera h2 {
   font-weight: 700;
   font-size: 2rem;
-  color: #eee;
+  font-family: "Press Start 2P", system-ui;
+  font-style: normal;
+  color: #50b5ff;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .seccion-cabecera .ver-mas {
@@ -574,12 +580,7 @@ footer nav.footer-menu a:focus {
   outline: none;
 }
 
-.seccion-cabecera h2 {
-  color: #50b5ff;          /* celeste principal */
-  display: flex;           /* opcional: evita saltos de línea entre icono y texto */
-  align-items: center;     /* opcional: los centra verticalmente */
-  gap: 0.5rem;             /* mismo espacio que ya tenías para el icono */
-}
+
 
 .resaltado {
   background-color: #50b5ff;
@@ -648,10 +649,17 @@ a:hover {
   flex-wrap: nowrap; /* ← clave para que no se apilen */
 }
 
-.soldado {
+.soldado1 {
   width: 350px;   /* Aumentá según lo que necesites */
   height: auto;
 }
+
+.soldado2 {
+  width: 350px;   /* Aumentá según lo que necesites */
+  height: auto;
+}
+
+
 
 
 
@@ -679,6 +687,10 @@ a:hover {
     width: auto;      /* ancho automático, o fijá un max-width si querés */
     padding: 0.6rem 1.3rem;
     font-size: 1rem;  /* aumentá un poco si está muy pequeño */
+  }
+
+  .soldado1 {
+     display: none;
   }
 
 
@@ -731,6 +743,8 @@ a:hover {
   /* 9 ▸ Títulos y botones un poco más chicos */
   .btn-claim             { min-width: 180px; padding: .65rem 1.6rem; }
   .cta-botones .btn      { padding: .7rem 1.6rem; font-size: .9rem; }
+
+
 }
 
 
