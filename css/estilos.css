@@ -675,8 +675,10 @@ a:hover {
   }
 
   a.btn-discord {
-    align-self: stretch;          /* botón ancho completo */
-    text-align: center;
+    align-self: auto; /* que no tome todo el alto */
+    width: auto;      /* ancho automático, o fijá un max-width si querés */
+    padding: 0.6rem 1.3rem;
+    font-size: 1rem;  /* aumentá un poco si está muy pequeño */
   }
 
 
@@ -691,9 +693,22 @@ a:hover {
 
 
   /* 3 ▸ SECCIONES GENERALES */
-  .seccion            { padding: 2rem 1rem; }
-  .seccion-cabecera   { flex-direction: column; align-items: flex-start; gap: .6rem; }
-  .seccion-cabecera h2 { font-size: 1.6rem; }
+.seccion-cabecera {
+    flex-direction: row;        /* que sigan en fila */
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;            /* que si no entra, se envuelva */
+    gap: 0.5rem;
+  }
+
+  .seccion-cabecera h2 {
+    flex: 1 1 auto;
+    min-width: 0; /* para evitar overflow */
+  }
+
+  .seccion-cabecera .ver-mas {
+    flex-shrink: 0;  /* que no se achique */
+  }
 
   /* 4 ▸ TARJETAS BONUS — una por fila, 100 % ancho */
   .tarjetas-bonuses      { flex-direction: column; align-items: center; }
