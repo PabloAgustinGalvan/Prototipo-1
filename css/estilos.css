@@ -665,25 +665,48 @@ a:hover {
 ------------------------------------------------------------------*/
 @media (max-width: 767px) {
 
-  /* 1 ▸ NAVBAR — ocupa todo el ancho y los links se apilan */
-  nav.nav-principal {
-    padding: 0.8rem 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .7rem;
+ nav.nav-principal {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
   }
 
-  nav.nav-principal ul.menu {
+  .nav-contenido {
+    display: flex;
     flex-direction: column;
-    gap: .8rem;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
   }
 
+  h1.logo {
+    font-size: 1.8rem;
+    color: #50b5ff;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    justify-content: center;
+  }
+
+  ul.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
   a.btn-discord {
-    align-self: auto; /* que no tome todo el alto */
-    width: auto;      /* ancho automático, o fijá un max-width si querés */
+    font-size: 1rem;
     padding: 0.6rem 1.3rem;
-    font-size: 1rem;  /* aumentá un poco si está muy pequeño */
+    background-color: #aaa;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
   }
 
   .soldado1 {
@@ -695,6 +718,10 @@ a:hover {
   section.hero {
     padding: 1.5rem 1.2rem;
     margin: 1.5rem auto;
+  }
+
+  section.hero .codigo{
+    margin-top: 250px;
   }
 
   section.hero .nombre-del-sitio { font-size: 2.4rem; }
@@ -713,6 +740,7 @@ a:hover {
   .seccion-cabecera h2 {
     flex: 1 1 auto;
     min-width: 0; /* para evitar overflow */
+    font-size: 1.3rem;
   }
 
   .seccion-cabecera .ver-mas {
