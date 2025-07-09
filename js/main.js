@@ -8,3 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector("#menu-toggle");
+  const navContenido = document.querySelector(".nav-contenido");
+
+  toggle.addEventListener("click", function () {
+    navContenido.classList.toggle("menu-abierto");
+  });
+});
