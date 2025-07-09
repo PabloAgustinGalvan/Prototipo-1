@@ -254,7 +254,7 @@ section.hero .nombre-del-sitio{
 }
 
 /* TARJETAS BONUSES */
-.tarjetas-bonuses {
+.tarjetas-bonificacion {
   display: flex;
   gap: 1.6rem;
   flex-wrap: wrap;
