@@ -85,13 +85,18 @@ nav.nav-principal ul.menu li a {
 
 nav.nav-principal ul.menu li a:hover,
 nav.nav-principal ul.menu li a:focus {
-  color: #50b5ff;
+  color: #8300ff;
   outline: none;
+}
+
+nav.nav-principal ul.menu li a.activo {
+  color: #8300ff;
+  border-bottom: 2px solid #8300ff;
 }
 
 /* BOTÓN DISCORD */
 a.btn-discord {
-  background-color: #50b5ff;
+  background-color: #8300ff;
   color: white;
   font-weight: 600;
   padding: 0.6rem 1.3rem;
@@ -133,7 +138,7 @@ section.hero {
   left: -30px;
   right: -30px;
   bottom: -20px;
-  background: #50b5ff;
+  background: #8300ff;
   filter: blur(40px);
   opacity: 0.5;
   border-radius: 25px;
@@ -144,15 +149,11 @@ section.hero .codigo {
   font-weight: 700;
   font-size: 1.1rem;
   color: #ffffff !important;         /* blanco puro */
-  background-color: #50b5ff;          /* fondo celeste */
+  background-color: #8300ff;          /* fondo celeste */
   padding: 0.3rem 0.6rem;
   border-radius: 30px;
   margin-bottom: 1rem;
   display: inline-block;
-}
-
-section.hero .codigo {
-  color: #a1d8ff;
 }
 
 section.hero .slogan {
@@ -167,14 +168,14 @@ section.hero .slogan {
   font-weight: 600;
   max-width: 700px;
   margin: 0 auto 2.5rem;
-  color: #87ceeb;
+  color: #8300ff;
 }
 
 section.hero .nombre-del-sitio{
   font-family: "Permanent Marker", cursive;
   font-size: 4rem;      /* tamaño grande */
   font-weight: 700;
-  color: #50b5ff;
+  color: #8300ff; /* Violet */
   margin-bottom: 0.3rem; /* espacio abajo */
 }
 
@@ -188,7 +189,7 @@ section.hero .nombre-del-sitio{
 }
 
 .cta-botones .btn {
-  background-color: #50b5ff;
+  background-color: #8300ff;
   color: white;
   padding: 0.9rem 2.2rem;
   font-weight: 700;
@@ -205,7 +206,7 @@ section.hero .nombre-del-sitio{
 
 .cta-botones .btn:hover,
 .cta-botones .btn:focus {
-  background-color: #4091cc;
+  background-color: #aaa;
   outline: none;
 }
 
@@ -228,7 +229,7 @@ section.hero .nombre-del-sitio{
   font-size: 2rem;
   font-family: "Press Start 2P", system-ui;
   font-style: normal;
-  color: #50b5ff;
+  color: #8300ff;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -236,7 +237,7 @@ section.hero .nombre-del-sitio{
 
 .seccion-cabecera .ver-mas {
    display: inline-block;       /* respeta padding como bloque */
-   background-color: #50b5ff;   /* fondo celeste */
+   background-color: #8300ff;   /* fondo celeste */
    color: #fff;                 /* texto blanco */
    padding: 0.3rem 0.9rem;      /* alto × ancho del rectángulo */
    border-radius: 6px;          /* esquinas redondeadas */
@@ -270,7 +271,7 @@ section.hero .nombre-del-sitio{
   flex-direction: column;
   gap: 1rem;
   text-align: center;
-  border: 2px solid #50b5ff; /* ← Esta línea agrega el borde */
+  border: 2px solid #8300ff; /* ← Esta línea agrega el borde */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* sombra sutil */
 }
 
@@ -279,7 +280,7 @@ section.hero .nombre-del-sitio{
   align-items: center;
   gap: 0.5rem;
   font-weight: 700;
-  color: #50b5ff;
+  color: #aaa;
   position: relative;
   font-size: 1.2rem;
 }
@@ -292,7 +293,7 @@ section.hero .nombre-del-sitio{
   margin-right: 0.75em;
   align-self: center;
   min-width: 30px;
-  border-bottom-color: #50b5ff;
+  border-bottom-color: #8300ff;
 }
 
 /* Línea a la derecha */
@@ -303,17 +304,17 @@ section.hero .nombre-del-sitio{
   margin-left: 0.75em;
   align-self: center;
   min-width: 30px;
-  border-bottom-color: #50b5ff;
+  border-bottom-color: #8300ff;
 }
 
 
 .tarjeta-bonus h3.bonus-code span {
   font-weight: 900;
-  color: #a1d8ff;
+  color: #8300ff;
 }
 
 .fa-circle-check {
-  color: #50b5ff; /* verde */
+  color: #8300ff; /* verde */
 }
 
 .copiar-btn {
@@ -321,7 +322,7 @@ section.hero .nombre-del-sitio{
   border: none;
   cursor: pointer;
   font-size: 1.2rem;
-  color: #007bff;
+  color: #8300ff;
   padding: 0;
   display: flex;
   align-items: center;
@@ -355,7 +356,7 @@ section.hero .nombre-del-sitio{
 }
 
 .btn-claim {
-  background-color: #50b5ff;
+  background-color: #8300ff;
   color: white;
   font-weight: 1000;
   padding: 0.75rem 2.5rem; /* 0.75 rem arriba/abajo, 2.5 rem a los lados */
@@ -431,7 +432,7 @@ section.hero .nombre-del-sitio{
   align-items: center;
   gap: 0.3rem;
   text-decoration: none; /* quita subrayado */
-  color: #007bff;
+  color: #8300ff;
   cursor: pointer;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -442,7 +443,7 @@ section.hero .nombre-del-sitio{
 
 .tarjeta-video {
   background: #121212;
-  border: 2px solid #50b5ff;
+  border: 2px solid #8300ff;
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -495,7 +496,7 @@ section.hero .nombre-del-sitio{
 }
 
 .lista-social li:hover {
-  background-color: #50b5ff;
+  background-color: #8300ff;
 }
 
 .social-header {
@@ -542,7 +543,7 @@ section.hero .nombre-del-sitio{
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #50b5ff;
+  color: #8300ff;
   font-size: 1.2rem;
   transition: transform 0.3s ease;
 }
@@ -569,7 +570,7 @@ footer nav.footer-menu {
 }
 
 footer nav.footer-menu a {
-  color: #50b5ff;
+  color: #8300ff;
   text-decoration: none;
   font-weight: 600;
 }
@@ -606,10 +607,6 @@ footer nav.footer-menu a:focus {
   transition: all 0.3s ease;
 }
 
-nav.nav-principal ul.menu li a.activo {
-  color: #50b5ff;
-  border-bottom: 2px solid #50b5ff;
-}
 
 section {
   scroll-margin-top: 90px; /* se alinea justo debajo del nav */
@@ -635,7 +632,7 @@ a:hover {
 .footer-linea {
   width: 25%;                 /* la línea ocupa el 50% del ancho del contenedor */
   height: 2px;                /* grosor de la línea */
-  background-color: #50b5ff;  /* color celeste */
+  background-color: #8300ff;  /* color celeste */
   margin: 0.8rem auto 1.5rem; /* centrado horizontal y separación arriba/abajo */
   border-radius: 2px;         /* bordes redondeados para que quede más suave */
 }
