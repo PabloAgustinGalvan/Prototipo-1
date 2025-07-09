@@ -74,13 +74,15 @@ nav.nav-principal ul.menu {
   list-style: none;
   gap: 2rem;
 }
-
 nav.nav-principal ul.menu li a {
-  color: #aaa;
-  font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  font-weight: 400;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
 }
 
 nav.nav-principal ul.menu li a:hover,
@@ -147,7 +149,7 @@ section.hero {
 
 section.hero .codigo {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #ffffff !important;         /* blanco puro */
   background-color: #8300ff;          /* fondo celeste */
   padding: 0.3rem 0.6rem;
@@ -181,6 +183,7 @@ section.hero .nombre-del-sitio{
 
 .btn i {
   margin-right: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .cta-botones {
@@ -188,11 +191,13 @@ section.hero .nombre-del-sitio{
   gap: 1.3rem;
 }
 
+
 .cta-botones .btn {
+  font-family: 'Montserrat', sans-serif;
   background-color: #8300ff;
   color: white;
   padding: 0.9rem 2.2rem;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
   border-radius: 30px;
   cursor: pointer;
@@ -236,12 +241,13 @@ section.hero .nombre-del-sitio{
 }
 
 .seccion-cabecera .ver-mas {
+   font-family: 'Montserrat', sans-serif;
    display: inline-block;       /* respeta padding como bloque */
    background-color: #8300ff;   /* fondo celeste */
    color: #fff;                 /* texto blanco */
    padding: 0.3rem 0.9rem;      /* alto × ancho del rectángulo */
    border-radius: 6px;          /* esquinas redondeadas */
-   font-weight: 600;
+   font-weight: 700;
    font-size: 1rem;
    text-decoration: none;       /* sin subrayado */
    transition: background-color 0.3s ease;
@@ -342,6 +348,11 @@ section.hero .nombre-del-sitio{
   text-align: left;        /* Texto alineado en vertical */
 }
 
+.bonus-beneficios .texto{
+  font-family: 'Montserrat', sans-serif;
+
+}
+
 .bonus-beneficios li {
   display: flex;           /* Ícono y texto en fila */
   align-items: start;
@@ -356,6 +367,7 @@ section.hero .nombre-del-sitio{
 }
 
 .btn-claim {
+  font-family: 'Montserrat', sans-serif;
   background-color: #8300ff;
   color: white;
   font-weight: 1000;
@@ -366,6 +378,11 @@ section.hero .nombre-del-sitio{
   border-radius: 70px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.btn-claim i{
+  font-size: 1rem; /* aumentá o disminuí el tamaño acá */
+
 }
 
 .btn-claim:hover,
@@ -573,7 +590,11 @@ footer nav.footer-menu a {
   color: #8300ff;
   text-decoration: none;
   font-weight: 600;
+  font-family: 'Rubik', sans-serif;
+
 }
+
+
 
 footer nav.footer-menu a:hover,
 footer nav.footer-menu a:focus {
