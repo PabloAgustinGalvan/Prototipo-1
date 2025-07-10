@@ -62,6 +62,16 @@ nav.nav-principal .logo {
   margin-right: 0.5rem;
 }
 
+.logo .relas-img {
+  width: 40px;          /* tamaño ancho, ajusta a lo que quieras */
+  height: auto;         /* para que mantenga proporción */
+  margin-left: 0.5rem;  /* espacio a la izquierda, separa del texto */
+  vertical-align: middle; /* para que quede bien alineada con el texto y video */
+  border-radius: 4px;   /* si querés bordes redondeados */
+  /* podés agregar más estilos acá */
+}
+
+
 .logo-icon {
   width: 100%;
   height: 100%;
@@ -107,6 +117,13 @@ a.btn-discord {
   font-size: 0.9rem;
   transition: background-color 0.3s ease;
   border: 2px solid transparent;
+}
+
+.btn-discord i.fab {
+  font-size: 1.5rem;   /* tamaño del icono */
+  color: white;      /* color típico de Discord, podés cambiar */
+  margin-right: 0.3rem; /* espacio a la derecha para separar del texto */
+  vertical-align: middle; /* para que quede bien alineado */
 }
 
 a.btn-discord:hover,
@@ -174,10 +191,10 @@ section.hero .slogan {
 }
 
 section.hero .nombre-del-sitio{
-  font-family: "Permanent Marker", cursive;
-  font-size: 4rem;      /* tamaño grande */
+  font-family: "Source Code Pro", monospace;
+  font-size: 3.5rem;      /* tamaño grande */
   font-weight: 700;
-  color: #8300ff; /* Violet */
+  color: #dcdcdc; /* Violet */
   margin-bottom: 0.3rem; /* espacio abajo */
 }
 
@@ -229,10 +246,24 @@ section.hero .nombre-del-sitio{
   margin-bottom: 2rem;
 }
 
+.seccion-cabecera i {
+  background-color: #dcdcdc;  /* fondo violeta */
+  color: #8300ff;               /* color del ícono */
+  border-radius: 50%;         /* hace el círculo */
+  padding: 0.4rem;            /* espacio interno */
+  margin-right: 0.5rem;       /* separación del texto */
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
 .seccion-cabecera h2 {
   font-weight: 700;
   font-size: 2rem;
-  font-family: "Press Start 2P", system-ui;
+  font-family: "Source Code Pro", monospace;
   font-style: normal;
   color: #8300ff;
   display: flex;
@@ -359,6 +390,12 @@ section.hero .nombre-del-sitio{
   margin-bottom: 5px;
 }
 
+.bonus-beneficios li i.fa-solid {
+  margin-right: 0.4rem; /* o el espacio que quieras */
+  color: #8300ff; /* opcional, para que se vea más bonito */
+  vertical-align: middle; /* para alinear mejor con el texto */
+}
+
 .icono {
   width: 1.5em;            /* Espacio fijo para alinear */
   display: inline-block;
@@ -394,9 +431,11 @@ section.hero .nombre-del-sitio{
 .bonus-img {
   display: block;     /* Para que respete márgenes */
   margin: 0 auto;     /* Centra horizontalmente */
-  width: 100px;
-  height: auto;
+  width: auto;
+  height: 60px;
   margin-bottom: 8px;
+  filter: brightness(1.5);
+
 }
 
 /* TABLA LEADERBOARD */
@@ -465,16 +504,31 @@ section.hero .nombre-del-sitio{
   overflow: hidden;
   transition: transform 0.3s ease;
   box-shadow: 0 2px 8px rgba(80, 181, 255, 0.25);
+  /*max-height: 230px;*/
 }
 
-.tarjeta-video:hover {
-  transform: scale(1.03);
+
+.tarjeta-video img{
+  width:100%;
+  height:180px;         /* o usa aspect-ratio si querés */
+  display:block;        /* evita un pequeño “espacio fantasma” de inline‑block */
+  object-fit:cover;
+  object-position: center 70%;   /* <<< antes estaba top */
+  border-radius:0;      /* el borde lo recorta el overflow del article */
 }
 
-.tarjeta-video img {
-  width: 100%;
-  height: auto;
-  display: block;
+.titulo-video {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0.4rem 0 0.2rem;
+  padding: 0 0.5rem;
+  line-height: 1.25;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .fecha-video {
@@ -485,6 +539,9 @@ section.hero .nombre-del-sitio{
   color: #cccccc;
 }
 
+.tarjeta-video:hover {
+  transform: scale(1.03);
+}
 /* SOCIAL MEDIA */
 .lista-social {
   list-style: none;
@@ -670,11 +727,13 @@ a:hover {
 .soldado1 {
   width: 350px;   /* Aumentá según lo que necesites */
   height: auto;
+  filter: drop-shadow(0 0 2px #8300ff);
 }
 
 .soldado2 {
   width: 350px;   /* Aumentá según lo que necesites */
   height: auto;
+  filter: drop-shadow(0 0 2px #8300ff);
 }
 
 
