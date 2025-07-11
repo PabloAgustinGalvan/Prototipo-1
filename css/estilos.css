@@ -299,17 +299,31 @@ section.hero .nombre-del-sitio{
 }
 
 .tarjeta-bonus {
-  background: #121212;
+  background: #1a1a1a; /* un poco más claro que el fondo principal */
   padding: 1.8rem 2rem;
   border-radius: 14px;
   width: 280px;
-  box-shadow: 0 2px 8px rgb(80 181 255 / 0.25);
+  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  text-align: center;
-  border: 2px solid #8300ff; /* ← Esta línea agrega el borde */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* sombra sutil */
+
+  border: 1px solid rgba(131, 0, 255, 0.7); /* borde violeta suave */
+
+  /* Brillo suave tipo “halo” */
+  box-shadow:
+    0 0 8px rgba(131, 0, 255, 0.8),   /* resplandor violeta cercano */
+    0 0 16px rgba(80, 181, 255, 0.5); /* halo celeste más difuminado */
+}
+.tarjeta-bonus:hover {
+  box-shadow:
+    0 0 16px #a300ff,
+    0 0 28px #50b5ff;
+}
+.separador-bonus {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .tarjeta-bonus h3.bonus-code {
@@ -351,7 +365,7 @@ section.hero .nombre-del-sitio{
 }
 
 .fa-circle-check {
-  color: #8300ff; /* verde */
+  color: #8300ff;
 }
 
 .copiar-btn {
@@ -433,10 +447,8 @@ section.hero .nombre-del-sitio{
   display: block;     /* Para que respete márgenes */
   margin: 0 auto;     /* Centra horizontalmente */
   width: auto;
-  height: 60px;
+  height: 90px;
   margin-bottom: 8px;
-  filter: brightness(1.5);
-
 }
 
 /* TABLA LEADERBOARD */
